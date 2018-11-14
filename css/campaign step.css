@@ -1,0 +1,168 @@
+.bg1{
+	background-color: #f6f3e5;
+	height: 23vh;
+}
+.bg2{
+	filter: brightness(95%);
+    background-size: cover;
+  	background-image: url('../img/campaign-step-background.jpg');
+  	height: 32vh;
+  	width: 100%;
+}
+.bg2 .title{
+	float: right;	
+	margin-right: 20%;
+	margin-top: 3%;
+	visibility: hidden;
+}
+.sliderightTitle{
+	float: right;	
+	margin-right: 20%;
+	margin-top: 3%;
+	animation-name: slideright;
+	animation-duration: 1.5s;
+
+	-webkit-animation-duration: 1.5s;
+	-webkit-animation-name: slideright;
+
+	/*for firefox*/
+	-moz-animation-duration: 1.5s;
+	-moz-animation-name: slideright;
+
+	  /* for opera*/
+	-o-animation-duration: 1.5s;
+	-o-animation-name: slideright;
+	visibility: visible !important;
+}
+
+.bg2 p{
+	font-size: 180%;
+	font-family: myfont;
+	font-weight: bold;
+	letter-spacing: 0.05em;
+}
+.bg2 hr{
+	width: 20%;
+	height: 5px;
+	border: 0;
+	background-color: black;
+}
+.bg3{
+	/*background-position-x: 2rem;*/
+	background-position-y: 70%;
+	width: 100%;
+	filter: brightness(100%);
+	background-size: cover;
+	background-image: url('../img/campaign-step-background.jpg');
+	height: 100vh;
+}
+.bg3 .pa1{
+	margin-top: 2%;
+	position: absolute;
+	visibility: hidden;
+}
+.slideleftpa1{
+	margin-top: 2%;
+	position: absolute;
+	animation-name: slideleft;
+	animation-duration: 1.5s;
+
+	-webkit-animation-duration: 1.5s;
+	-webkit-animation-name: slideleft;
+
+	/*for firefox*/
+	-moz-animation-duration: 1.5s;
+	-moz-animation-name: slideleft;
+
+	  /* for opera*/
+	-o-animation-duration: 1.5s;
+	-o-animation-name: slideleft;
+	visibility: visible !important;
+}
+
+.bg3 .pa2{
+	margin-top: 10%;
+	position: absolute;
+	right: 30%;
+	visibility: hidden;
+}
+.slideleftpa2{
+	margin-top: 10%;
+	position: absolute;
+	right: 30%;
+	animation-name: slideleft;
+	animation-duration: 2.5s;
+
+	-webkit-animation-duration: 2.5s;
+	-webkit-animation-name: slideleft;
+
+	/*for firefox*/
+	-moz-animation-duration: 2.5s;
+	-moz-animation-name: slideleft;
+
+		/* for opera*/
+	-o-animation-duration: 2.5s;
+	-o-animation-name: slideleft;
+	visibility: visible !important;
+	
+}
+.bg3 .pa3{
+	margin-top: 18%;
+	position: absolute;
+	left: 17%;
+}
+.slideleftpa3{
+	margin-top: 18%;
+	position: absolute;
+	left: 17%;
+	animation-name: slideleft;
+	animation-duration: 3s;
+
+	-webkit-animation-duration: 3s;
+	-webkit-animation-name: slideleft;
+
+	/*for firefox*/
+	-moz-animation-duration: 3s;
+	-moz-animation-name: slideleft;
+
+		/* for opera*/
+	-o-animation-duration: 3s;
+	-o-animation-name: slideleft;
+	visibility: visible !important;
+	
+}
+.bg3 .pa4{
+	margin-top: 30%;
+	position: absolute;
+	right: 22%;
+	visibility: hidden;
+}
+.slideleftpa4{
+	margin-top: 30%;
+	position: absolute;
+	right: 22%;
+	animation-name: slideleft;
+	animation-duration: 3.5s;
+
+	-webkit-animation-duration: 3.5s;
+	-webkit-animation-name: slideleft;
+
+	/*for firefox*/
+	-moz-animation-duration: 3.5s;
+	-moz-animation-name: slideleft;
+
+		/* for opera*/
+	-o-animation-duration: 3.5s;
+	-o-animation-name: slideleft;
+	visibility: visible !important;
+	
+}
+.bg3 p{
+	font-family: courier;
+}
+.bg3 hr{
+	width: 15%;
+	height: 5px;
+	background-color: black;
+	border: 0;
+}

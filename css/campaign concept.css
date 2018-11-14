@@ -1,0 +1,117 @@
+body{
+	background-color: rgba(250, 250, 250, 1);
+}
+.bg{
+	background-color: #f6f3e5;
+	height: 23vh;
+}
+video{
+	padding-left: 1.5%;
+	padding-top: 1.1%;
+	object-fit: fill;
+	position: absolute;
+	background-size: cover;
+	visibility: hidden;
+}
+.iphone{
+	padding-top: 13%;
+	padding-left: 7%;
+}
+.slideupIphoneX{
+	padding-left: 1.5%;
+	padding-top: 1.1%;
+	object-fit: fill;
+	position: absolute;
+	background-size: cover;
+	animation-name: slideup;
+	animation-duration: 1.5s;
+
+	-webkit-animation-duration: 1.5s;
+	-webkit-animation-name: slideup;
+
+	/*for firefox*/
+	-moz-animation-duration: 1.5s;
+	-moz-animation-name: slideup;
+
+	  /* for opera*/
+	-o-animation-duration: 1.5s;
+	-o-animation-name: slideup;
+	visibility: visible !important;
+}
+
+.iphoneImg{
+	width:26.5%;
+	height:730px;
+	position: absolute;
+	visibility: hidden;
+}
+
+.slideupiphoneImg{
+	width:26.5%;
+	height:730px;
+	position: absolute;
+	animation-name: slideup;
+	animation-duration: 1.5s;
+
+	-webkit-animation-duration: 1.5s;
+	-webkit-animation-name: slideup;
+
+	/*for firefox*/
+	-moz-animation-duration: 1.5s;
+	-moz-animation-name: slideup;
+
+	  /* for opera*/
+	-o-animation-duration: 1.5s;
+	-o-animation-name: slideup;
+	visibility: visible !important;
+}
+.text{
+	padding-left: 55%;
+	padding-top: 3%;
+	font-family: myfont;
+	letter-spacing: 0.05em;
+	font-weight: bolder;
+	visibility: hidden;
+}
+.slideleftText{
+	padding-left: 55%;
+	padding-top: 3%;
+	font-family: myfont;
+	letter-spacing: 0.05em;
+	font-weight: bolder;
+	animation-name: slideleft;
+	animation-duration: 1.5s;
+
+	-webkit-animation-duration: 1.5s;
+	-webkit-animation-name: slideleft;
+
+	/*for firefox*/
+	-moz-animation-duration: 1.5s;
+	-moz-animation-name: slideleft;
+
+	  /* for opera*/
+	-o-animation-duration: 1.5s;
+	-o-animation-name: slideleft;
+	visibility: visible !important;
+}
+
+.title{
+	font-size: 200%;
+}
+hr{
+	border: 0;
+	width: 10%;
+	height: 5px;
+	background-color: black;
+}
+.para{
+	text-align: justify;
+	text-justify: inter-word;
+	margin-top: 25%;
+	margin-right: 10%;
+	line-height: 1.4em;
+	font-size: 20px;
+}
+.bg1{
+	height: 170vh;
+}

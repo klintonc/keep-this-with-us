@@ -1,0 +1,340 @@
+.bg1{
+	background-color: #f6f3e5;
+	height: 23vh;
+}
+.bg2{
+	background-color: #e5c53e;
+	height: 100vh;
+}
+.bg2 .title{
+	letter-spacing: 0.2em;
+	font-family:myfont1;
+	padding-top: 3%;
+	font-size: 170%;
+	font-weight: bold;
+	color: #292929;
+	visibility: hidden;
+}
+.sliderightTitle{
+	letter-spacing: 0.2em;
+	font-family:myfont1;
+	padding-top: 3%;
+	font-size: 170%;
+	font-weight: bold;
+	color: #292929;
+	animation-name: slideright;
+	animation-duration: 1.5s;
+
+	-webkit-animation-duration: 1.5s;
+	-webkit-animation-name: slideright;
+
+	/*for firefox*/
+	-moz-animation-duration: 1.5s;
+	-moz-animation-name: slideright;
+
+	  /* for opera*/
+	-o-animation-duration: 1.5s;
+	-o-animation-name: slideright;
+	visibility: visible !important;
+}
+
+.bg2 hr{
+	border: 0;
+	width:16%;
+	height: 5px;
+	text-align: center;
+	background-color: black;
+}
+.bg2 .bgtext{
+	-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 97% 75%, 97% 81%, 100% 75%, 0% 75%);
+	clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 97% 75%, 97% 81%, 100% 75%, 0% 75%);
+	width: 35%;
+	height: 55%;
+	background-color: #61343E;
+	margin-top: 2%;
+	position: absolute;
+	visibility: hidden;
+}
+
+.sliderightBgtext{
+	-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 97% 75%, 97% 81%, 100% 75%, 0% 75%);
+	clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 97% 75%, 97% 81%, 100% 75%, 0% 75%);
+	width: 35%;
+	height: 55%;
+	background-color: #61343E;
+	margin-top: 2%;
+	position: absolute;
+	animation-name: slideright;
+	animation-duration: 1.5s;
+
+	-webkit-animation-duration: 1.5s;
+	-webkit-animation-name: slideright;
+
+	/*for firefox*/
+	-moz-animation-duration: 1.5s;
+	-moz-animation-name: slideright;
+
+	  /* for opera*/
+	-o-animation-duration: 1.5s;
+	-o-animation-name: slideright;
+	visibility: visible !important;
+}
+
+.bg2 .bgtext p{
+	color: white;
+	font-size: 150%;
+	font-family: myfont;
+	letter-spacing: 0.05em;
+	padding-top: 0px;
+	padding-left: 6%;
+	padding-right: 6%;
+	line-height: 130%;
+	text-align: justify;
+	text-justify: inter-word;
+	visibility: hidden;
+}
+.sliderightBgtextPa{
+	color: white;
+	font-size: 150%;
+	font-family: myfont;
+	letter-spacing: 0.05em;
+	padding-top: 0px;
+	padding-left: 6%;
+	padding-right: 6%;
+	line-height: 130%;
+	text-align: justify;
+	text-justify: inter-word;
+	animation-name: slideright;
+	animation-duration: 1.5s;
+
+	-webkit-animation-duration: 1.5s;
+	-webkit-animation-name: slideright;
+
+	/*for firefox*/
+	-moz-animation-duration: 1.5s;
+	-moz-animation-name: slideright;
+
+	  /* for opera*/
+	-o-animation-duration: 1.5s;
+	-o-animation-name: slideright;
+	visibility: visible !important;
+}
+.bg2 .bgtext1{
+	position: absolute;
+	padding-top: 12%;
+	padding-left: 30%;
+}
+.bg2 .bgtext1 p{
+	font-family: belinda;
+	font-size: 400%;
+	color: #292929;
+	text-shadow: 4px 4px 10px #292929;
+	letter-spacing: 0.3em;
+}
+.bg3{
+	height: 250vh;
+	background-color: #f6f3e5;
+}
+.bg3 .shape{
+	background-color: #828380;
+	width: 80%;
+	height: 900px;
+	float: right;
+	margin-right: 2%;
+	border-radius: 35%;
+	margin-top : 2%;
+}
+.bg3 .shape p{
+	font-size: 160%;
+	padding-top: 8%;
+	padding-right: 40%;
+	padding-left: 10%;
+	font-family: barlowconden;
+	visibility: hidden;
+}
+
+.sliderightPa{
+	font-size: 160%;
+	padding-top: 8%;
+	padding-right: 40%;
+	padding-left: 10%;
+	font-family: barlowconden;
+	animation-name: slideright;
+	animation-duration: 1.5s;
+
+	-webkit-animation-duration: 1.5s;
+	-webkit-animation-name: slideright;
+
+	/*for firefox*/
+	-moz-animation-duration: 1.5s;
+	-moz-animation-name: slideright;
+
+	  /* for opera*/
+	-o-animation-duration: 1.5s;
+	-o-animation-name: slideright;
+	visibility: visible !important;
+}
+.bg3 .shape img{
+	-webkit-clip-path: ellipse(50% 47% at 50% 50%);
+	clip-path: ellipse(50% 47% at 50% 50%);
+	width: 38%;
+	height: 70%;
+	margin-left: 15%;
+	position: absolute;
+	visibility: hidden;
+}
+.sliderightPaImg{
+	-webkit-clip-path: ellipse(50% 47% at 50% 50%);
+	clip-path: ellipse(50% 47% at 50% 50%);
+	width: 38%;
+	height: 70%;
+	margin-left: 15%;
+	position: absolute;
+	animation-name: slideright;
+	animation-duration: 1.5s;
+
+	-webkit-animation-duration: 1.5s;
+	-webkit-animation-name: slideright;
+
+	/*for firefox*/
+	-moz-animation-duration: 1.5s;
+	-moz-animation-name: slideright;
+
+	  /* for opera*/
+	-o-animation-duration: 1.5s;
+	-o-animation-name: slideright;
+	visibility: visible !important;
+}
+.bg3 .pa1{
+	position: absolute;
+	padding-top: 73%;
+	font-size: 150%;
+	font-family: barlowcondenextra;
+	text-align: justify;
+	text-justify: inter-word;
+	letter-spacing: 0.1em;
+	padding-right: 18%;
+}
+.bg3 hr{
+	width: 21%;
+	position: absolute;
+	margin-top: 95%;
+	margin-left: 46%;
+}
+.bg3 .pa2{
+	font-family: kghappy;
+	font-size: 300%;
+	position: absolute;
+	margin-top: 100%;
+	color: #292929;
+	text-transform: uppercase;
+}
+.bg4{
+	background-color: #B0A594;
+	height: 25vh;
+}
+.bg4 p{
+	font-family: damion;
+	font-size: 200%;
+	text-align: left;
+	padding-top: 1%;
+}
+.bg5{
+	height: 150vh;
+	background-color: #f6f3e5;
+}
+.bg5 .text1{
+	font-family: raleway;
+	font-size: 176%;
+	text-transform: uppercase;
+	text-align: justify;
+	text-justify: inter-word;
+	text-shadow: 2px 2px 0px #b0a594;
+	font-weight: bold;
+}
+.bg5 .shape1{
+	height: 550px;
+	width: 96%;
+	-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 97% 75%, 97% 81%, 100% 75%, 0% 75%);
+	clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 97% 75%, 97% 81%, 100% 75%, 0% 75%);
+	background-color: #e5c53e;
+	margin-top: 8%;
+	visibility: hidden;
+}
+.sliderightShape1{
+	height: 550px;
+	width: 96%;
+	-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 97% 75%, 97% 81%, 100% 75%, 0% 75%);
+	clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 97% 75%, 97% 81%, 100% 75%, 0% 75%);
+	background-color: #e5c53e;
+	margin-top: 8%;
+	animation-name: slideright;
+	animation-duration: 1.5s;
+
+	-webkit-animation-duration: 1.5s;
+	-webkit-animation-name: slideright;
+
+	/*for firefox*/
+	-moz-animation-duration: 1.5s;
+	-moz-animation-name: slideright;
+
+	  /* for opera*/
+	-o-animation-duration: 1.5s;
+	-o-animation-name: slideright;
+	visibility: visible !important;
+}
+.bg5 .shape1 p:nth-of-type(1){
+	font-family: raleway;
+	font-size: 23px;
+	color: #61343E;
+	padding-top: 8%;
+	padding-left: 4%;
+	padding-right: 43%;
+	text-align: justify;
+	text-justify: inter-word;
+	font-weight: bolder;
+	letter-spacing: 0.05em;
+	visibility: hidden;
+}
+.sliderightConclude{
+	font-family: raleway;
+	font-size: 23px;
+	color: #61343E;
+	padding-top: 8%;
+	padding-left: 4%;
+	padding-right: 43%;
+	text-align: justify;
+	text-justify: inter-word;
+	font-weight: bolder;
+	letter-spacing: 0.05em;
+	animation-name: slideright;
+	animation-duration: 1.5s;
+
+	-webkit-animation-duration: 1.5s;
+	-webkit-animation-name: slideright;
+
+	/*for firefox*/
+	-moz-animation-duration: 1.5s;
+	-moz-animation-name: slideright;
+
+	  /* for opera*/
+	-o-animation-duration: 1.5s;
+	-o-animation-name: slideright;
+	visibility: visible !important;
+}
+.bg5 .quote1{
+	position: absolute;
+	margin-top: -5%;
+	text-align: right;
+	margin-left: 48%;
+	font-family: enriqueta;
+	font-size: 220%; 
+}
+.bg5 .quote2{
+	position: absolute;
+	text-align: right;
+	margin-left: 56%;
+	font-family: enriqueta;
+	font-size: 125%;
+	margin-top: 10%;
+}

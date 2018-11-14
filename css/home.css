@@ -1,0 +1,221 @@
+@font-face{
+	font-family: "josefin";
+	src: url("../font/josefin/JosefinSans-Light.ttf") format("opentype");
+}
+.bg1{
+	background-color: #f6f3e5;
+	height: 180vh;
+}
+.firstVideo{
+	object-fit: fill;
+	position: absolute;
+	width: 80%;
+	height: 125%;
+	top: 28.5%;
+	left: 10%;
+}
+.bg2{
+    background-size: cover;
+  	/*background-image: url('https://static.wixstatic.com/media/11062b_66b9234563324488b85be02dcf1db183f000.jpg/v1/fill/w_1349,h_791,al_c,q_85,usm_0.33_1.00_0.00/11062b_66b9234563324488b85be02dcf1db183f000.webp');*/
+  	height: 120vh;
+}
+.bg2 video{
+	object-fit: fill;
+	position: absolute;
+	height: 120%;
+	width: 100%;
+}
+.pack{
+	position: absolute;
+	padding-top: 16%;
+	padding-left: 22%;
+	visibility: hidden;
+}
+.slideinpack {
+	position: absolute;
+	padding-top: 16%;
+	padding-left: 22%;
+	/* for chrome and safari*/
+	-webkit-animation-duration: 1.5s;
+	-webkit-animation-name: slidein;
+
+	/*for firefox*/
+	-moz-animation-duration: 1.5s;
+	-moz-animation-name: slidein;
+
+	  /* for opera*/
+	-o-animation-duration: 1.5s;
+	-o-animation-name: slidein;
+
+	  /* Standard syntax*/
+	animation-duration: 1.5s;
+	animation-name: slidein;
+}
+
+.bg2 span{
+	opacity: 0.9;
+	color: white;
+	font-weight: bolder;
+	font-size: 200%;
+	font-family: myfont;
+	letter-spacing: 0.05em;
+}
+.bg2 hr{
+	border: 0;
+	width: 90%;
+	height: 5px;
+	background-color: black;
+}
+
+.bg3{
+	height: 200vh;
+	background-color: #61343E;
+}
+
+.bg3 p{
+	font-family: myfont;
+	font-size: 250%;
+	color: white;
+	font-weight: bold;
+}
+.bg3 img{
+	margin-left: 23%;
+	margin-top: 10%;
+	outline: transparent solid 1px;
+	border-radius: 50%;
+	object-fit: cover;
+	-webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+.bg3 .pack1 p{
+	font-family: normal;
+	font-size: 1em;
+	font-weight: normal;
+}
+.bg3 .pack1 p:nth-of-type(1){
+	font-family: belinda;
+	font-size: 200%;
+	color: rgb(48,63,77);
+}
+.pack1{
+	padding-top: 2%;
+	padding-left: 35%;
+}
+.pic1{
+	line-height: 10px;
+	width: 92%;
+	height: 290px;
+	background-color: #e5c53e;
+}
+
+.hoverpic1{
+	position: relative;
+	width: 50%;
+	visibility: hidden;
+}
+.slideup {
+	position: relative;
+	width: 50%;
+	/* for chrome and safari*/
+	-webkit-animation-duration: 1.5s;
+	-webkit-animation-name: slideup;
+
+	/*for firefox*/
+	-moz-animation-duration: 1.5s;
+	-moz-animation-name: slideup;
+
+	  /* for opera*/
+	-o-animation-duration: 1.5s;
+	-o-animation-name: slideup;
+
+	  /* Standard syntax*/
+	animation-duration: 1.5s;
+	animation-name: slideup;
+	visibility: visible !important;	
+}
+
+
+.overlay1{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 290px;
+	width: 92%;
+	opacity: 0;
+	transition: .5s ease;
+	background-color: rgb(48,63,77);
+}
+#hover1:hover .overlay1{
+	opacity: 1;
+}
+.hoverpic2{
+	position: relative;
+	width: 50%;
+	visibility: hidden;
+}
+
+.overlay2{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 290px;
+	width: 92%;
+	opacity: 0;
+	transition: .5s ease;
+	background-color: rgb(48,63,77);
+}
+#hover2:hover .overlay2{
+	opacity: 1;
+}
+.text{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	color: white;
+	font-size: 20px;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
+	font-family: josefin;
+}
+
+.hoverpic3{
+	position: relative;
+	width: 50%;
+	visibility: hidden;
+}
+.overlay3{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 290px;
+	width: 92%;
+	opacity: 0;
+	transition: .5s ease;
+	background-color: rgb(48,63,77);
+}
+#hover3:hover .overlay3{
+	opacity: 1;
+}
+
+.pic2{
+	line-height: 10px;
+	margin-top: 50px;
+	width: 92%;
+	height: 290px;
+	background-color: #e5c53e;
+}
+.pic3{
+	line-height: 10px;
+	margin-top: 50px;
+	width: 92%;
+	height: 290px;
+	background-color: #e5c53e;
+}

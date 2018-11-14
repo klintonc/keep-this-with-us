@@ -1,0 +1,79 @@
+.bg1{
+	background-color: #f6f3e5;
+	height: 23vh;
+}
+.bg2{
+	background-color: rgba(250, 250, 250, 1);
+  	height: 110vh;
+}
+.bg2 .title{
+	font-size: 300%;
+	padding-top: 3%;
+	visibility: hidden;
+}
+
+.bg2 hr{
+	border: 0;
+	width: 5%;
+	height: 3px;
+	background-color: black;
+}
+
+.bg2 td #img,#img1,#img2{
+	outline: transparent solid 1px;
+	width: 216px;
+	height: 217px;
+	border-radius: 50%;
+	object-fit: cover;
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	visibility: hidden;
+}
+.zoomtitle{
+	font-size: 300%;
+	padding-top: 3%;
+	-webkit-animation-name: zoom;
+    -webkit-animation-duration: 1.5s;
+    animation-name: zoom;
+	animation-duration: 1.5s;
+	-o-animation-name: zoom;
+	-o-animation-duration: 1.5s;
+	-moz-animation-name: zoom;
+	-moz-animation-duration: 1.5;
+	/* animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;		 */
+}
+.zoomimg{
+	outline: transparent solid 1px;
+	width: 216px;
+	height: 217px;
+	border-radius: 50%;
+	object-fit: cover;
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-animation-name: zoom;
+	-webkit-animation-duration: 1.5s;
+	-o-animation-name: zoom;
+	-o-animation-duration: 1.5s;
+	-moz-animation-name: zoom;
+	-moz-animation-duration: 1.5;
+    animation-name: zoom;
+	animation-duration: 1.5s;
+	
+	/* animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease; */
+	visibility: visible !important;		
+}
+
+.name{
+	font-family:didot-w01-italic,serif;
+	font-style: italic;
+	font-size: 20px;
+	font-weight: normal;
+	line-height: 0.8em;
+	letter-spacing: 0.05em;
+}
+.bg3{
+	height: 35vh;
+	background-color: #61343E;
+}
