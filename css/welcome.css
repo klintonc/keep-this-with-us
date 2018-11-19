@@ -16,17 +16,21 @@ body{
 }
 .carousel-item {
     height: 100vh;
+    height: 100dvh;
     min-height: 300px;
     background: no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-position: center center;
 }
 .carousel-caption{
     position: absolute;
-    top: 9%;
-} 
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+}
 body{
     margin: 0;
     padding: 0;
@@ -93,5 +97,165 @@ p{
     letter-spacing: 0.06em;
     font-family:didot-w01-italic;
     font-style: italic;
-    padding-top: 7%;
+    padding-top: 20px;
+}
+@media (max-width: 767.98px){
+    html,
+    body{
+        height: 100%;
+        overflow: hidden;
+    }
+    .carousel,
+    .carousel-inner{
+        height: 100vh;
+        height: 100dvh;
+    }
+    .carousel-item{
+        min-height: 0;
+    }
+}
+.nav-toggle{
+    display: none;
+}
+@media (max-width: 767.98px){
+    .nav-toggle{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        position: fixed;
+        top: 16px;
+        right: 16px;
+        z-index: 60;
+        width: 48px;
+        height: 48px;
+        padding: 0;
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.35);
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+        cursor: pointer;
+        transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+    .nav-toggle:focus{
+        outline: none;
+    }
+    .nav-toggle:focus-visible{
+        outline: 2px solid #b0a594;
+        outline-offset: 3px;
+    }
+    .nav-toggle-bar{
+        display: block;
+        width: 20px;
+        height: 2px;
+        border-radius: 2px;
+        background-color: white;
+        transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.2s ease;
+    }
+    .menu-open .nav-toggle{
+        background-color: transparent;
+        border-color: rgba(255, 255, 255, 0.5);
+    }
+    .menu-open .nav-toggle-bar:nth-child(1){
+        transform: translateY(7px) rotate(45deg);
+    }
+    .menu-open .nav-toggle-bar:nth-child(2){
+        opacity: 0;
+    }
+    .menu-open .nav-toggle-bar:nth-child(3){
+        transform: translateY(-7px) rotate(-45deg);
+    }
+    .headmenu{
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 55;
+        display: flex;
+        justify-content: center;
+        width: auto;
+        height: auto;
+        margin: 0;
+        padding: 88px 24px 40px;
+        overflow-y: auto;
+        background-color: rgba(18, 18, 18, 0.88);
+        -webkit-backdrop-filter: blur(12px);
+        backdrop-filter: blur(12px);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.35s ease, visibility 0s linear 0.35s;
+    }
+    .menu-open .headmenu{
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.35s ease;
+    }
+    .unoreder{
+        margin: auto 0;
+        padding: 0;
+        text-align: center;
+    }
+    .menu{
+        height: auto;
+        min-height: 0;
+        opacity: 0;
+        transform: translateY(16px);
+        transition: opacity 0.4s ease, transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .menu-open .menu{
+        opacity: 1;
+        transform: none;
+    }
+    .menu-open .menu:nth-child(2){ transition-delay: 0.05s; }
+    .menu-open .menu:nth-child(3){ transition-delay: 0.1s; }
+    .menu-open .menu:nth-child(4){ transition-delay: 0.15s; }
+    .menu-open .menu:nth-child(5){ transition-delay: 0.2s; }
+    .menu-open .menu:nth-child(6){ transition-delay: 0.25s; }
+    .menu-open .menu:nth-child(7){ transition-delay: 0.3s; }
+    .linkmenu{
+        display: inline-block;
+        padding: 10px 16px;
+        font-size: 1.375rem;
+        letter-spacing: 0.12em;
+    }
+    .menu:last-child{
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .menu:last-child .linkmenu{
+        font-size: 0.95rem;
+        letter-spacing: 0.18em;
+        color: #b0a594;
+    }
+    .carousel-caption{
+        left: 24px;
+        right: 24px;
+        padding: 0;
+        text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+    }
+    .carousel-caption img{
+        width: 48px;
+        height: 48px;
+    }
+    .carousel-caption p{
+        margin-bottom: 6px;
+        padding-top: 14px;
+        font-size: 1.25rem;
+    }
+    .carousel-caption h1{
+        margin: 0;
+        font-size: clamp(1.75rem, 9vw, 2.5rem);
+        line-height: 1.15;
+        letter-spacing: 0.04em;
+    }
+    .carousel-control-prev i,
+    .carousel-control-next i{
+        font-size: 2rem;
+    }
+    .carousel-indicators{
+        margin-bottom: max(16px, env(safe-area-inset-bottom));
+    }
 }
