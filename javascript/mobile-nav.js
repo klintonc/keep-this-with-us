@@ -2,7 +2,7 @@
     var toggle = document.querySelector('.nav-toggle');
     var menu = document.getElementById('site-menu');
     var carousel = window.jQuery ? window.jQuery('#carouselExampleIndicators') : null;
-    var mobile = window.matchMedia('(max-width: 767.98px)');
+    var mobile = window.matchMedia('(max-width: 1024px)');
     if (!toggle || !menu) return;
 
     function isOpen() {

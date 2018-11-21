@@ -7,9 +7,15 @@
 	<link rel="stylesheet" type="text/css" href="../css/home.css">
 	<link rel="stylesheet" type="text/css" href="../css/main.css">
 	<link rel="stylesheet" type="text/css" href="../css/animation.css">
+	<link rel="stylesheet" type="text/css" href="../css/mobile-nav.css">
 </head>
 <body>
-	<nav>
+	<button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu">
+		<span class="nav-toggle-bar"></span>
+		<span class="nav-toggle-bar"></span>
+		<span class="nav-toggle-bar"></span>
+	</button>
+	<nav class="site-menu" id="site-menu">
 		<ul>
 			<li><a href="welcome.html">Welcome</a></li>
 			<li><a href="home.html" class="list1">HOME</a></li>
@@ -117,6 +123,7 @@
 	<footer>
 		&copy; Chanikan, Klinton, Nontapat
 	</footer>
+	<script src="../javascript/mobile-nav.js"></script>
 	<script type="text/javascript" src="../javascript/home.js"></script>
 </body>
 </html>
