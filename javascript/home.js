@@ -1,16 +1,50 @@
-window.onscroll = function(){scrollFunction()};
+(function () {
+    var targets = [
+        ['.pack', 'slideinpack'],
+        ['.hoverpic1', 'slideup'],
+        ['.hoverpic2', 'slideup'],
+        ['.hoverpic3', 'slideup']
+    ];
 
-function scrollFunction(){
-    if((document.body.scrollTo > 1000 && document.body.scrollTo<1500) || (document.documentElement.scrollTop >1000 &&document.documentElement.scrollTop<1500)){
-        document.querySelector('.pack').className = 'slideinpack';
+    var items = targets.map(function (target) {
+        var element = document.querySelector(target[0]);
+        if (element) element.setAttribute('data-reveal-class', target[1]);
+        return element;
+    }).filter(Boolean);
+
+    function reveal(element) {
+        element.classList.add(element.getAttribute('data-reveal-class'));
     }
-    if((document.body.scrollTo > 1500 &&document.body.scrollTo < 1800) || (document.documentElement.scrollTop >1500&&document.documentElement.scrollTop<1800)){
-        document.querySelector('.hoverpic1').className = 'slideup';
+
+    document.querySelectorAll('.flip-card').forEach(function (card) {
+        function flip() {
+            var flipped = card.classList.toggle('is-flipped');
+            card.setAttribute('aria-pressed', String(flipped));
+        }
+
+        card.addEventListener('click', flip);
+        card.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                flip();
+            }
+        });
+    });
+
+    if (!('IntersectionObserver' in window)) {
+        items.forEach(reveal);
+        return;
     }
-    if((document.body.scrollTo > 1800 &&document.body.scrollTo < 2100) || (document.documentElement.scrollTop >1800&&document.documentElement.scrollTop<2100)){
-        document.querySelector('.hoverpic2').className = 'slideup';
-    }
-    if(document.body.scrollTo > 2100 &&document.body.scrollTo  || document.documentElement.scrollTop >2100){
-        document.querySelector('.hoverpic3').className = 'slideup';
-    }
-}
+
+    var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            reveal(entry.target);
+            observer.unobserve(entry.target);
+        });
+    }, { rootMargin: '0px 0px -15% 0px' });
+
+    items.forEach(function (element) {
+        observer.observe(element);
+    });
+})();

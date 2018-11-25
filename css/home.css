@@ -7,7 +7,7 @@
 	height: 180vh;
 }
 .firstVideo{
-	object-fit: fill;
+	object-fit: cover;
 	position: absolute;
 	width: 80%;
 	height: 125%;
@@ -20,7 +20,7 @@
   	height: 120vh;
 }
 .bg2 video{
-	object-fit: fill;
+	object-fit: cover;
 	position: absolute;
 	height: 120%;
 	width: 100%;
@@ -33,6 +33,7 @@
 }
 .slideinpack {
 	position: absolute;
+	visibility: visible;
 	padding-top: 16%;
 	padding-left: 22%;
 	/* for chrome and safari*/
@@ -68,7 +69,7 @@
 }
 
 .bg3{
-	height: 200vh;
+	padding-bottom: 96px;
 	background-color: #61343E;
 }
 
@@ -85,7 +86,7 @@
 	border-radius: 50%;
 	object-fit: cover;
 	-webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
+	filter: grayscale(100%);
 }
 .bg3 .pack1 p{
 	font-family: normal;
@@ -101,121 +102,231 @@
 	padding-top: 2%;
 	padding-left: 35%;
 }
-.pic1{
-	line-height: 10px;
-	width: 92%;
-	height: 290px;
-	background-color: #e5c53e;
-}
-
-.hoverpic1{
+.flip-card{
 	position: relative;
 	width: 50%;
+	perspective: 1200px;
+	cursor: pointer;
+	outline: none;
+	-webkit-tap-highlight-color: transparent;
+}
+.flip-card + .flip-card{
+	margin-top: 50px;
+}
+.hoverpic1,
+.hoverpic2,
+.hoverpic3{
 	visibility: hidden;
 }
 .slideup {
-	position: relative;
-	width: 50%;
-	/* for chrome and safari*/
 	-webkit-animation-duration: 1.5s;
 	-webkit-animation-name: slideup;
-
-	/*for firefox*/
-	-moz-animation-duration: 1.5s;
-	-moz-animation-name: slideup;
-
-	  /* for opera*/
-	-o-animation-duration: 1.5s;
-	-o-animation-name: slideup;
-
-	  /* Standard syntax*/
 	animation-duration: 1.5s;
 	animation-name: slideup;
-	visibility: visible !important;	
+	visibility: visible !important;
 }
-
-
-.overlay1{
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	height: 290px;
-	width: 92%;
-	opacity: 0;
-	transition: .5s ease;
-	background-color: rgb(48,63,77);
-}
-#hover1:hover .overlay1{
-	opacity: 1;
-}
-.hoverpic2{
+.flip-card-inner{
 	position: relative;
-	width: 50%;
-	visibility: hidden;
+	width: 92%;
+	height: 290px;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
-
-.overlay2{
+.flip-card.is-flipped .flip-card-inner{
+	transform: rotateY(180deg);
+}
+.flip-card:focus-visible .flip-card-inner{
+	outline: 3px solid #e5c53e;
+	outline-offset: 6px;
+}
+.flip-card-front,
+.flip-card-back{
 	position: absolute;
 	top: 0;
-	bottom: 0;
 	left: 0;
-	right: 0;
-	height: 290px;
-	width: 92%;
-	opacity: 0;
-	transition: .5s ease;
-	background-color: rgb(48,63,77);
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
 }
-#hover2:hover .overlay2{
-	opacity: 1;
+.flip-card-front{
+	line-height: 10px;
+	background-color: #e5c53e;
+}
+.flip-card-back{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 24px;
+	overflow-y: auto;
+	transform: rotateY(180deg);
+	background-color: rgb(48,63,77);
 }
 .text{
-	position: absolute;
-	top: 50%;
-	left: 50%;
 	color: white;
 	font-size: 20px;
-	-webkit-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
+	line-height: 1.4;
 	text-align: center;
 	font-family: josefin;
 }
-
-.hoverpic3{
-	position: relative;
-	width: 50%;
-	visibility: hidden;
-}
-.overlay3{
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	height: 290px;
-	width: 92%;
-	opacity: 0;
-	transition: .5s ease;
-	background-color: rgb(48,63,77);
-}
-#hover3:hover .overlay3{
-	opacity: 1;
+@media (prefers-reduced-motion: reduce){
+	.flip-card-inner{
+		transition: none;
+	}
 }
 
-.pic2{
-	line-height: 10px;
-	margin-top: 50px;
-	width: 92%;
-	height: 290px;
-	background-color: #e5c53e;
+@media (max-width: 1024px){
+	.page-home .hastage{
+		position: static;
+		width: auto;
+		margin: 0;
+		padding: 88px 6% 0;
+		transform: none;
+		background-color: #f6f3e5;
+	}
+	.page-home .hastage .font_hastage{
+		margin: 0;
+		text-align: left;
+		font-size: clamp(2rem, 9vw, 3.5rem);
+		line-height: 1.1;
+		letter-spacing: 0.02em;
+		overflow-wrap: anywhere;
+	}
+	.page-home .quote{
+		position: static;
+		width: auto;
+		padding: 12px 6% 0;
+		background-color: #f6f3e5;
+	}
+	.page-home .quote .marquee{
+		width: 100%;
+	}
+	.page-home .quote .font_quote{
+		margin: 0;
+		font-size: 100%;
+		letter-spacing: 0.18em;
+	}
+	.page-home .container{
+		width: 88%;
+		margin-left: 6%;
+		margin-right: 6%;
+	}
+	.bg1{
+		height: auto;
+		padding: 24px 0 48px;
+	}
+	.firstVideo{
+		position: static;
+		display: block;
+		width: 88%;
+		height: auto;
+		aspect-ratio: 16 / 9;
+		margin: 0 auto;
+	}
+	.bg2{
+		position: relative;
+		display: flex;
+		align-items: center;
+		overflow: hidden;
+		height: auto;
+		min-height: 80vh;
+		min-height: 80svh;
+	}
+	.bg2 video{
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	.page-home .bg2 .container{
+		position: relative;
+	}
+	.pack,
+	.slideinpack{
+		position: relative;
+		padding: 64px 0;
+	}
+	.bg2 span{
+		font-size: 150%;
+	}
+	.bg2 hr{
+		width: 60%;
+	}
+	.bg3{
+		padding: 48px 0 64px;
+	}
+	.bg3 p{
+		font-size: 180%;
+	}
+	.bg3 #conserve{
+		margin: 0 0 32px;
+	}
+	.pack1{
+		padding: 0;
+	}
+	.flip-card,
+	.slideup{
+		width: 100%;
+		max-width: 360px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.flip-card + .flip-card{
+		margin-top: 32px;
+	}
+	.flip-card-inner{
+		width: 100%;
+		height: 320px;
+	}
+	.flip-card-front{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 8px;
+		padding: 24px;
+		line-height: 1.2;
+	}
+	.bg3 img{
+		width: 150px;
+		height: 150px;
+		margin: 0 0 8px;
+	}
+	.bg3 .pack1 p{
+		margin: 0;
+	}
+	.text{
+		font-size: 17px;
+	}
+	.page-home .bgBottom{
+		height: auto;
+		padding: 32px 0 40px;
+	}
+	.page-home .bgBottom table,
+	.page-home .bgBottom tbody{
+		display: block;
+		width: 100%;
+	}
+	.page-home .bgBottom tr{
+		display: flex;
+		flex-wrap: wrap;
+		gap: 12px 40px;
+	}
+	.page-home .bgBottom td{
+		display: block;
+		padding: 0;
+		line-height: 1.3;
+	}
 }
-.pic3{
-	line-height: 10px;
-	margin-top: 50px;
-	width: 92%;
-	height: 290px;
-	background-color: #e5c53e;
+@media (max-width: 600px){
+	.page-home .bgBottom tr{
+		flex-direction: column;
+		gap: 14px;
+	}
+	.page-home .bgBottom td{
+		padding-left: 16px;
+		border-left: 3px solid #b0a594;
+	}
 }

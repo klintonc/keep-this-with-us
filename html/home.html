@@ -9,7 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/animation.css">
 	<link rel="stylesheet" type="text/css" href="../css/mobile-nav.css">
 </head>
-<body>
+<body class="page-home">
 	<button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu">
 		<span class="nav-toggle-bar"></span>
 		<span class="nav-toggle-bar"></span>
@@ -30,7 +30,7 @@
 		<p class="font_hastage">#KeepThisWithUs</p>
 	</div>
 	<div class="quote">
-		<marquee width="40%"><p class="font_quote">Keep This With Us</p></marquee>
+		<div class="marquee"><p class="font_quote">Keep This With Us</p></div>
 	</div>
 	<div class="bg1">
 		<video autoplay muted loop playsinline disablepictureinpicture disableremoteplayback class="firstVideo" poster="../video/my-movie-poster.jpg">
@@ -62,42 +62,48 @@
 			<div class="inner">
 				<p align="center" id="conserve">We want to conserve ...</p>
 				<div class="pack1">
-					<div class="hoverpic1" id="hover1">
-						<div class="pic1">
-							<img src="../img/precious-thing-buddha-statue.jpg" width="50%" height="50%" alt="Klinton's conservation thing">
-							<p align="center">Klinton's</p>
-							<p align="center">My precious thing to keep &nbsp; &gt;</p>
-						</div>
-						<div class="overlay1">
-							<div class="text">
-								The religion can calm our minds. When we believe in something, that means we have a faith. And faith can heal us. Let’s #KeepThisWihUs for the peace in the world.
+					<div class="hoverpic1 flip-card" id="hover1" role="button" tabindex="0" aria-pressed="false" aria-label="Flip Klinton's card to read the story" aria-describedby="story1">
+						<div class="flip-card-inner">
+							<div class="pic1 flip-card-front">
+								<img src="../img/precious-thing-buddha-statue.jpg" width="50%" height="50%" alt="Klinton's conservation thing">
+								<p align="center">Klinton's</p>
+								<p align="center">My precious thing to keep &nbsp; &gt;</p>
+							</div>
+							<div class="overlay1 flip-card-back">
+								<div class="text" id="story1">
+									The religion can calm our minds. When we believe in something, that means we have a faith. And faith can heal us. Let’s #KeepThisWihUs for the peace in the world.
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="hoverpic2" id="hover2">
-						<div class="pic2">
-							<img src="../img/precious-thing-thai-desserts.jpg" width="50%" height="50%" alt="Jenny's conservation thing">
-							<p align="center">Chanikan's</p>
-							<p align="center">My precious thing to keep &nbsp; &gt;</p>
-						</div>
-						<div class="overlay2">
-							<div class="text">
-								Thai cuisine and dessert is the<br>
-								unique of Thailand. It’s<br> 
-								palatable and has its own way of taste. So,<br>
-								#KeepThisWithUs! 
+					<div class="hoverpic2 flip-card" id="hover2" role="button" tabindex="0" aria-pressed="false" aria-label="Flip Chanikan's card to read the story" aria-describedby="story2">
+						<div class="flip-card-inner">
+							<div class="pic2 flip-card-front">
+								<img src="../img/precious-thing-thai-desserts.jpg" width="50%" height="50%" alt="Jenny's conservation thing">
+								<p align="center">Chanikan's</p>
+								<p align="center">My precious thing to keep &nbsp; &gt;</p>
+							</div>
+							<div class="overlay2 flip-card-back">
+								<div class="text" id="story2">
+									Thai cuisine and dessert is the<br>
+									unique of Thailand. It’s<br> 
+									palatable and has its own way of taste. So,<br>
+									#KeepThisWithUs! 
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="hoverpic3" id="hover3">
-						<div class="pic3">
-							<img src="../img/precious-thing-coral-reef.jpg" width="50%" height="50%" alt="Joke's conservation thing">
-							<p align="center">Nontapat's</p>
-							<p align="center">My precious thing to keep &nbsp; &gt;</p>
-						</div>
-						<div class="overlay3">
-							<div class="text" style="font-size : 100%;">
-								I found that many of those places are threatened with over tourism. Reefs are not just only sightseeing places, but it also provides shelter and food for numerous marine lives. I want the future generations to see the beauty of those reefs, not just our generation. #KeepThisWithUs
+					<div class="hoverpic3 flip-card" id="hover3" role="button" tabindex="0" aria-pressed="false" aria-label="Flip Nontapat's card to read the story" aria-describedby="story3">
+						<div class="flip-card-inner">
+							<div class="pic3 flip-card-front">
+								<img src="../img/precious-thing-coral-reef.jpg" width="50%" height="50%" alt="Joke's conservation thing">
+								<p align="center">Nontapat's</p>
+								<p align="center">My precious thing to keep &nbsp; &gt;</p>
+							</div>
+							<div class="overlay3 flip-card-back">
+								<div class="text" id="story3" style="font-size : 100%;">
+									I found that many of those places are threatened with over tourism. Reefs are not just only sightseeing places, but it also provides shelter and food for numerous marine lives. I want the future generations to see the beauty of those reefs, not just our generation. #KeepThisWithUs
+								</div>
 							</div>
 						</div>
 					</div>

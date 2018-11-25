@@ -61,10 +61,15 @@ nav{
     position: fixed; 
     margin-right: 0.1%;
     z-index: 50; 
-    height: 37%;
+    height: auto;
 }
 nav ul{
 	list-style-type: none;
+	margin: 16px 0 5px;
+}
+nav li{
+	height: auto;
+	min-height: 30px;
 }
 li{
 	min-height:30px;
@@ -120,6 +125,31 @@ nav a:hover{
 	letter-spacing:0.23em;
 	font-family:didot-w01-italic,serif;
 	font-weight:bold;
+}
+.marquee{
+	width: 40%;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.marquee .font_quote{
+	display: inline-block;
+	padding-left: 100%;
+	animation: marquee-scroll 9s linear infinite;
+	will-change: transform;
+}
+@keyframes marquee-scroll{
+	from{
+		transform: translate3d(0, 0, 0);
+	}
+	to{
+		transform: translate3d(-100%, 0, 0);
+	}
+}
+@media (prefers-reduced-motion: reduce){
+	.marquee .font_quote{
+		padding-left: 0;
+		animation: none;
+	}
 }
 .container{
 	display: block;
