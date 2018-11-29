@@ -1,22 +1,44 @@
-document.addEventListener('DOMContentLoaded', function(){
-    setTimeout(function(){
-        document.querySelector('.title').className = 'sliderightTitle';
-        document.querySelector('.bgtext').className = 'sliderightBgtext';
-        document.querySelector('.bgtextpa').className = 'sliderightBgtextPa';
-    },100);
-},false);
+(function () {
+    function addClass(selector, className) {
+        var element = document.querySelector(selector);
+        if (element) element.classList.add(className);
+        return element;
+    }
 
-window.onscroll = function(){scrollFunction()};
+    document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(function () {
+            addClass('.bg2 .title', 'sliderightTitle');
+            addClass('.bgtext', 'sliderightBgtext');
+            addClass('.bgtextpa', 'sliderightBgtextPa');
+        }, 100);
 
-function scrollFunction(){
-    if((document.body.scrollTop > 500 &&document.body.scrollTop<700) ||(document.documentElement.scrollTop > 500 &&document.documentElement.scrollTop<700)){
-        document.querySelector('.pa').className = 'sliderightPa';
-    }
-    if((document.body.scrollTop > 700 && document.body.scrollTop<1000) || (document.documentElement.scrollTop>700&&document.documentElement.scrollTop<1000)){
-        document.querySelector('.paImg').className = 'sliderightPaImg';
-    }
-    if(document.body.scrollTop>2300 || document.documentElement.scrollTop>2300){
-        document.querySelector('.shape1').className = 'sliderightShape1';
-        document.querySelector('.conclude').className = 'sliderightConclude';
-    }
-}
+        var targets = [
+            ['.pa', function () { addClass('.pa', 'sliderightPa'); }],
+            ['.paImg', function () { addClass('.paImg', 'sliderightPaImg'); }],
+            ['.shape1', function () {
+                addClass('.shape1', 'sliderightShape1');
+                addClass('.conclude', 'sliderightConclude');
+            }]
+        ];
+
+        if (!('IntersectionObserver' in window)) {
+            targets.forEach(function (target) { target[1](); });
+            return;
+        }
+
+        var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (!entry.isIntersecting) return;
+                entry.target.revealCallback();
+                observer.unobserve(entry.target);
+            });
+        }, { rootMargin: '0px 0px -15% 0px' });
+
+        targets.forEach(function (target) {
+            var element = document.querySelector(target[0]);
+            if (!element) return;
+            element.revealCallback = target[1];
+            observer.observe(element);
+        });
+    });
+})();
