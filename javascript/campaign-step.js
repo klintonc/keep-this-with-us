@@ -1,9 +1,14 @@
-document.addEventListener('DOMContentLoaded', function(){
-    setTimeout(function(){
-        document.querySelector('.title').className = 'sliderightTitle';
-        document.querySelector('.pa1').className = 'slideleftpa1';
-        document.querySelector('.pa2').className = 'slideleftpa2';
-        document.querySelector('.pa3').className = 'slideleftpa3';
-        document.querySelector('.pa4').className = 'slideleftpa4';
-    },100);
-},false);
+document.addEventListener('DOMContentLoaded', function () {
+    setTimeout(function () {
+        [
+            ['.bg2 .title', 'sliderightTitle'],
+            ['.pa1', 'slideleftpa1'],
+            ['.pa2', 'slideleftpa2'],
+            ['.pa3', 'slideleftpa3'],
+            ['.pa4', 'slideleftpa4']
+        ].forEach(function (target) {
+            var element = document.querySelector(target[0]);
+            if (element) element.classList.add(target[1]);
+        });
+    }, 100);
+}, false);
