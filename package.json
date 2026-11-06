@@ -1,0 +1,10 @@
+{
+  "name": "keep-this-with-us",
+  "private": true,
+  "scripts": {
+    "start": "live-server --open=html/welcome.html"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
