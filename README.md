@@ -2,6 +2,8 @@
 
 **#KeepThisWithUs** is a conservation awareness campaign website, built as the final project for **ITCS210 Web Programming** at the Faculty of ICT, Mahidol University (MUICT).
 
+![Welcome page of the Keep This With Us website, showing the "Share your important thing" carousel slide](docs/screenshots/welcome-page.jpg)
+
 ## About the course project
 
 The project shows how to build a multi-page static website with:
